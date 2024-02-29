@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://gmprtk5ioujt"]
+
+[ext_resource type="Script" path="res://instance/player.gd" id="1_7mxe2"]
+[ext_resource type="SpriteFrames" uid="uid://dduijujfw2107" path="res://graphics/spriteframes/chet.tres" id="1_54hy4"]
+
+[node name="player" type="Node2D"]
+script = ExtResource("1_7mxe2")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+sprite_frames = ExtResource("1_54hy4")
+animation = &"run"
+frame_progress = 0.751046
+
+[node name="playercamera" type="Camera2D" parent="."]
+position = Vector2(286, -78)
