@@ -1,23 +1,69 @@
-[gd_scene load_steps=2 format=3 uid="uid://b1wolny2ro54u"]
+[gd_scene load_steps=5 format=3 uid="uid://b1wolny2ro54u"]
 
-[ext_resource type="AudioStream" uid="uid://dbtet3juj002p" path="res://tunes/theme.ogg" id="1_v7k2i"]
+[ext_resource type="Theme" uid="uid://b1fxb6qjj1gfu" path="res://gui/gui_theme.tres" id="1_cbp0b"]
+[ext_resource type="Script" path="res://gui/mainmenu.gd" id="1_okamh"]
+[ext_resource type="Texture2D" uid="uid://b8s2idn6tcxj2" path="res://icon.svg" id="2_p48d3"]
 
-[node name="Control" type="Control"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_b11yc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_p48d3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="mainmenu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_okamh")
 
-[node name="thememusic" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("1_v7k2i")
-autoplay = true
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(640, 300)
+sprite_frames = SubResource("SpriteFrames_b11yc")
 
-[node name="Label" type="Label" parent="."]
+[node name="Panel" type="Panel" parent="."]
 layout_mode = 0
-offset_left = 410.0
-offset_top = 19.0
-offset_right = 743.0
-offset_bottom = 144.0
-text = "Pickles"
+offset_left = 495.0
+offset_top = 377.0
+offset_right = 779.0
+offset_bottom = 500.0
+
+[node name="Button3" type="Button" parent="Panel"]
+layout_mode = 0
+offset_top = 60.0
+offset_right = 283.0
+offset_bottom = 91.0
+theme = ExtResource("1_cbp0b")
+text = "settings"
+
+[node name="Button4" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 91.0
+offset_right = 284.0
+offset_bottom = 122.0
+theme = ExtResource("1_cbp0b")
+text = "quit"
+
+[node name="Button2" type="Button" parent="Panel"]
+layout_mode = 0
+offset_top = 30.0
+offset_right = 283.0
+offset_bottom = 61.0
+theme = ExtResource("1_cbp0b")
+text = "practice"
+
+[node name="Button" type="Button" parent="Panel"]
+layout_mode = 0
+offset_top = -1.0
+offset_right = 283.0
+offset_bottom = 30.0
+theme = ExtResource("1_cbp0b")
+text = "fight"

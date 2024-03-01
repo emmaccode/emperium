@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bh0q86rdgih0m"
+path="res://.godot/imported/creator theme.ogg-420a35466201c54059295c175f621ada.oggvorbisstr"
+
+[deps]
+
+source_file="res://tunes/creator theme.ogg"
+dest_files=["res://.godot/imported/creator theme.ogg-420a35466201c54059295c175f621ada.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
