@@ -12,7 +12,7 @@ config_version=5
 
 config/name="emperium"
 run/main_scene="res://bootsplash.tscn"
-config/features=PackedStringArray("4.2", "GL Compatibility")
+config/features=PackedStringArray("4.2", "C#", "GL Compatibility")
 boot_splash/bg_color=Color(0, 0, 0, 1)
 config/icon="res://icon.png"
 
@@ -52,9 +52,9 @@ jump={
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":32,"key_label":0,"unicode":32,"echo":false,"script":null)
 ]
 }
-crouch={
+crouch_forward={
 "deadzone": 0.5,
-"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":83,"key_label":0,"unicode":115,"echo":false,"script":null)
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":83,"physical_keycode":83,"key_label":83,"unicode":115,"echo":false,"script":null)
 ]
 }
 block={
@@ -95,5 +95,4 @@ ultimate={
 
 [rendering]
 
-renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"

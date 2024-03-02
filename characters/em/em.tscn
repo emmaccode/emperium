@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://dsxn3gsi2qtj1"]
+
+[ext_resource type="Script" path="res://characters/em/em_moves.cs" id="1_5okd4"]
+[ext_resource type="Texture2D" uid="uid://col06gkhw6xfb" path="res://characters/em/sprites/ready/1.svg" id="1_7hjl4"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_crhtm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_7hjl4")
+}],
+"loop": true,
+"name": &"ready",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ayyp5"]
+
+[node name="em" type="CharacterBody3D"]
+script = ExtResource("1_5okd4")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, 0, 0)
+shaded = true
+sprite_frames = SubResource("SpriteFrames_crhtm")
+animation = &"ready"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.740289, 0, 0, 0, 0.740289, 0, 0, 0, 0.740289, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_ayyp5")
