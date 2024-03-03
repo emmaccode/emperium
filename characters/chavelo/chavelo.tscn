@@ -1,0 +1,42 @@
+[gd_scene load_steps=4 format=3 uid="uid://bnww7dwr7wafn"]
+
+[ext_resource type="Texture2D" uid="uid://bt0d0lice8ygy" path="res://characters/chavelo/sprites/ready/1.svg" id="1_nmmjm"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ge1yo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_nmmjm")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_gs6n7"]
+radius = 2.49513
+height = 7.27108
+
+[node name="chavelo" type="CharacterBody3D"]
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+shaded = true
+sprite_frames = SubResource("SpriteFrames_ge1yo")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_gs6n7")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.853414, 2.837, 0.187678)
+light_color = Color(1, 1, 0.372549, 1)
+light_energy = 0.238
+light_indirect_energy = 12.581
+omni_range = 0.366
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.58399, 2.837, 0.187678)
+light_color = Color(1, 1, 0.372549, 1)
+light_energy = 0.238
+light_indirect_energy = 12.581
+omni_range = 0.366
