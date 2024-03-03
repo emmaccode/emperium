@@ -3,9 +3,9 @@ using System;
 
 public partial class em_moves : CharacterBody3D
 {
-	public const float Speed = 5.0f;
-	public const float JumpVelocity = 4.5f;
-	bool Fighting = false;
+	public const float Speed = 10.0f;
+	public const float JumpVelocity = 9.5f;
+	bool Locked = false;
 	// Get the gravity from the project settings to be synced with RigidBody nodes.
 	public float gravity = ProjectSettings.GetSetting("physics/3d/default_gravity").AsSingle();
 

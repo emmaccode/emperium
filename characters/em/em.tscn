@@ -15,16 +15,22 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ayyp5"]
+radius = 0.960169
+height = 6.65805
 
 [node name="em" type="CharacterBody3D"]
 script = ExtResource("1_5okd4")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
-transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, 0, 0)
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 shaded = true
 sprite_frames = SubResource("SpriteFrames_crhtm")
 animation = &"ready"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(0.740289, 0, 0, 0, 0.740289, 0, 0, 0, 0.740289, 0, 0, 0)
+transform = Transform3D(0.740289, 0, 0, 0, 0.740289, 0, 0, 0, 0.740289, -0.158, -0.0075233, 0)
 shape = SubResource("CapsuleShape3D_ayyp5")
+
+[node name="camera" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.68123, 9.22687)
+current = true
