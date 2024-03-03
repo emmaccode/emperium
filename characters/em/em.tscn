@@ -1,17 +1,69 @@
-[gd_scene load_steps=5 format=3 uid="uid://dsxn3gsi2qtj1"]
+[gd_scene load_steps=12 format=3 uid="uid://dsxn3gsi2qtj1"]
 
 [ext_resource type="Script" path="res://characters/em/em_moves.cs" id="1_5okd4"]
 [ext_resource type="Texture2D" uid="uid://col06gkhw6xfb" path="res://characters/em/sprites/ready/1.svg" id="1_7hjl4"]
+[ext_resource type="Texture2D" uid="uid://dyk3p5veiua4s" path="res://characters/em/sprites/ready/2.svg" id="3_cdvvt"]
+[ext_resource type="Texture2D" uid="uid://bbfhi3gr8na2j" path="res://characters/em/sprites/ready/3.svg" id="4_66osm"]
+[ext_resource type="Texture2D" uid="uid://1o157mvmmu1p" path="res://characters/em/sprites/ready/4.svg" id="5_34myl"]
+[ext_resource type="Texture2D" uid="uid://cfxstds17jmov" path="res://characters/em/sprites/ready/5.svg" id="6_xlekr"]
+[ext_resource type="Texture2D" uid="uid://d0y6kg87jred5" path="res://characters/em/sprites/ready/6.svg" id="7_nxuc6"]
+[ext_resource type="Texture2D" uid="uid://bqe7u80t4emwp" path="res://characters/em/sprites/ready/7.svg" id="8_r42sx"]
+[ext_resource type="Texture2D" uid="uid://bqiroh2nexfvx" path="res://characters/em/sprites/ready/8.svg" id="9_evqro"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_crhtm"]
 animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("1_7hjl4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_cdvvt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_66osm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_34myl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_xlekr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_nxuc6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_r42sx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_evqro")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_7hjl4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_cdvvt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_66osm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_34myl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_xlekr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_nxuc6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_r42sx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_evqro")
 }],
 "loop": true,
 "name": &"ready",
-"speed": 5.0
+"speed": 8.0
 }]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ayyp5"]
@@ -26,6 +78,7 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 shaded = true
 sprite_frames = SubResource("SpriteFrames_crhtm")
 animation = &"ready"
+frame_progress = 0.228774
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(0.740289, 0, 0, 0, 0.740289, 0, 0, 0, 0.740289, -0.158, -0.0075233, 0)
