@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dsxn3gsi2qtj1"]
+[gd_scene load_steps=15 format=3 uid="uid://dsxn3gsi2qtj1"]
 
 [ext_resource type="Script" path="res://characters/em/em_moves.cs" id="1_5okd4"]
 [ext_resource type="Texture2D" uid="uid://col06gkhw6xfb" path="res://characters/em/sprites/ready/1.svg" id="1_7hjl4"]
@@ -9,6 +9,9 @@
 [ext_resource type="Texture2D" uid="uid://d0y6kg87jred5" path="res://characters/em/sprites/ready/6.svg" id="7_nxuc6"]
 [ext_resource type="Texture2D" uid="uid://bqe7u80t4emwp" path="res://characters/em/sprites/ready/7.svg" id="8_r42sx"]
 [ext_resource type="Texture2D" uid="uid://bqiroh2nexfvx" path="res://characters/em/sprites/ready/8.svg" id="9_evqro"]
+[ext_resource type="Texture2D" uid="uid://23ny38nnrh1k" path="res://characters/em/sprites/ready/9.svg" id="10_1m56q"]
+[ext_resource type="Texture2D" uid="uid://b47sft4hlkaic" path="res://characters/em/sprites/ready/10.svg" id="11_r8sfd"]
+[ext_resource type="Texture2D" uid="uid://di504ba61mdu6" path="res://characters/em/sprites/ready/11.svg" id="12_c1wco"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_crhtm"]
 animations = [{
@@ -38,7 +41,13 @@ animations = [{
 "texture": ExtResource("9_evqro")
 }, {
 "duration": 1.0,
-"texture": ExtResource("1_7hjl4")
+"texture": ExtResource("10_1m56q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_r8sfd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_c1wco")
 }, {
 "duration": 1.0,
 "texture": ExtResource("3_cdvvt")
@@ -60,6 +69,12 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("9_evqro")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_1m56q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_r8sfd")
 }],
 "loop": true,
 "name": &"ready",
@@ -78,12 +93,13 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 shaded = true
 sprite_frames = SubResource("SpriteFrames_crhtm")
 animation = &"ready"
-frame_progress = 0.625141
+frame_progress = 0.0183834
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(0.740289, 0, 0, 0, 0.740289, 0, 0, 0, 0.740289, -0.158, -0.0075233, 0)
 shape = SubResource("CapsuleShape3D_ayyp5")
 
 [node name="camera" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.32903, 11.395)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.61785, 11.395)
 current = true
+fov = 70.8865
