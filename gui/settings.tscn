@@ -1,9 +1,49 @@
-[gd_scene format=3 uid="uid://ofxevhagt63a"]
+[gd_scene load_steps=2 format=3 uid="uid://ofxevhagt63a"]
 
-[node name="Control" type="Control"]
+[ext_resource type="FontFile" uid="uid://b7ki60idynoq3" path="res://gui/fonts/Raleway-Light.ttf" id="1_q8ryl"]
+
+[node name="settingspanel" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_top = 74.0
+offset_right = 1279.0
+offset_bottom = 718.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel"]
+layout_mode = 0
+offset_right = 1278.0
+offset_bottom = 53.0
+alignment = 1
+
+[node name="Button6" type="Button" parent="Panel/HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_q8ryl")
+theme_override_font_sizes/font_size = 29
+toggle_mode = true
+button_pressed = true
+text = "  display "
+
+[node name="Button7" type="Button" parent="Panel/HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_q8ryl")
+theme_override_font_sizes/font_size = 29
+text = "  controls "
+
+[node name="Button8" type="Button" parent="Panel/HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_q8ryl")
+theme_override_font_sizes/font_size = 29
+text = "  graphics "
+
+[node name="Button9" type="Button" parent="Panel/HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_q8ryl")
+theme_override_font_sizes/font_size = 29
+text = "  sound "

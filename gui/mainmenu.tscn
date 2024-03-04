@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://b1wolny2ro54u"]
 
-[ext_resource type="Theme" uid="uid://b1fxb6qjj1gfu" path="res://gui/gui_theme.tres" id="1_cbp0b"]
 [ext_resource type="Script" path="res://gui/mainmenu.gd" id="1_okamh"]
 [ext_resource type="Texture2D" uid="uid://b8s2idn6tcxj2" path="res://icon.svg" id="2_p48d3"]
+[ext_resource type="FontFile" uid="uid://cp643tifupdg6" path="res://gui/fonts/Raleway-ExtraBold.ttf" id="3_w11c7"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_b11yc"]
 animations = [{
@@ -25,45 +25,50 @@ grow_vertical = 2
 script = ExtResource("1_okamh")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(640, 300)
+position = Vector2(66, 48)
+scale = Vector2(0.635338, 0.635338)
 sprite_frames = SubResource("SpriteFrames_b11yc")
 
-[node name="Panel" type="Panel" parent="."]
-layout_mode = 0
-offset_left = 495.0
-offset_top = 377.0
-offset_right = 779.0
-offset_bottom = 500.0
-
-[node name="Button3" type="Button" parent="Panel"]
-layout_mode = 0
-offset_top = 60.0
-offset_right = 283.0
+[node name="Button4" type="Button" parent="."]
+layout_mode = 2
+offset_left = 1201.0
+offset_top = 17.0
+offset_right = 1262.0
 offset_bottom = 91.0
-theme = ExtResource("1_cbp0b")
+theme_override_fonts/font = ExtResource("3_w11c7")
+theme_override_font_sizes/font_size = 29
+text = "exit"
+flat = true
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 2
+offset_left = 139.0
+offset_top = 15.0
+offset_right = 208.0
+offset_bottom = 89.0
+theme_override_fonts/font = ExtResource("3_w11c7")
+theme_override_font_sizes/font_size = 29
+text = "solo"
+flat = true
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 2
+offset_left = 247.0
+offset_top = 14.0
+offset_right = 421.0
+offset_bottom = 88.0
+theme_override_fonts/font = ExtResource("3_w11c7")
+theme_override_font_sizes/font_size = 29
+text = "multiplayer"
+flat = true
+
+[node name="Button3" type="Button" parent="."]
+layout_mode = 2
+offset_left = 455.0
+offset_top = 14.0
+offset_right = 579.0
+offset_bottom = 88.0
+theme_override_fonts/font = ExtResource("3_w11c7")
+theme_override_font_sizes/font_size = 29
 text = "settings"
-
-[node name="Button4" type="Button" parent="Panel"]
-layout_mode = 0
-offset_left = 1.0
-offset_top = 91.0
-offset_right = 284.0
-offset_bottom = 122.0
-theme = ExtResource("1_cbp0b")
-text = "quit"
-
-[node name="Button2" type="Button" parent="Panel"]
-layout_mode = 0
-offset_top = 30.0
-offset_right = 283.0
-offset_bottom = 61.0
-theme = ExtResource("1_cbp0b")
-text = "practice"
-
-[node name="Button" type="Button" parent="Panel"]
-layout_mode = 0
-offset_top = -1.0
-offset_right = 283.0
-offset_bottom = 30.0
-theme = ExtResource("1_cbp0b")
-text = "fight"
+flat = true
