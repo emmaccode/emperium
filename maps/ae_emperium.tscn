@@ -1,0 +1,47 @@
+[gd_scene load_steps=6 format=3 uid="uid://lgo7i680dikh"]
+
+[ext_resource type="Texture2D" uid="uid://b8s2idn6tcxj2" path="res://icon.svg" id="1_mqw2c"]
+[ext_resource type="PackedScene" uid="uid://dsxn3gsi2qtj1" path="res://characters/em/em.tscn" id="2_24414"]
+[ext_resource type="PackedScene" uid="uid://bnww7dwr7wafn" path="res://characters/chavelo/chavelo.tscn" id="3_afdo3"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_qalwo"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lte1x"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_mqw2c")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="ae_emperium" type="Node3D"]
+transform = Transform3D(24.7214, 0, 0, 0, 24.7214, 0, 0, 0, 24.7214, 0, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(58.9753, 0, 0, 0, 1.43842, 0, 0, 0, 25.8916, -0.126426, -6.38487, 4.86142)
+mesh = SubResource("BoxMesh_qalwo")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1.48505, 0, 0, 0, 14.785, 0, 0, 0, 25.8916, -28.8599, 1.60023, 4.86142)
+mesh = SubResource("BoxMesh_qalwo")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1.48505, 0, 0, 0, 14.785, 0, 0, 0, 25.8916, 28.7563, 1.60023, 4.86142)
+mesh = SubResource("BoxMesh_qalwo")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="."]
+transform = Transform3D(-64.8104, 0, 0, 0, 14.785, 0, 0, 0, -2.61068, 0.403708, 1.60023, -9.17679)
+mesh = SubResource("BoxMesh_qalwo")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+transform = Transform3D(2.87684, 0, 0, 0, 2.87684, 0, 0, 0, 2.87684, -0.126426, 3.96942, -7.22357)
+sprite_frames = SubResource("SpriteFrames_lte1x")
+
+[node name="em" parent="." instance=ExtResource("2_24414")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.3321, 0, 0)
+
+[node name="chavelo" parent="." instance=ExtResource("3_afdo3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.689, 0, 0)
