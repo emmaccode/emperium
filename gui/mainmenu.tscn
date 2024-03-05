@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://b1wolny2ro54u"]
 
-[ext_resource type="Script" path="res://gui/mainmenu.gd" id="1_okamh"]
+[ext_resource type="Script" path="res://gui/mainmenu.cs" id="1_gfguv"]
 [ext_resource type="Texture2D" uid="uid://b8s2idn6tcxj2" path="res://icon.svg" id="2_p48d3"]
 [ext_resource type="FontFile" uid="uid://cp643tifupdg6" path="res://gui/fonts/Raleway-ExtraBold.ttf" id="3_w11c7"]
 
@@ -22,14 +22,14 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_okamh")
+script = ExtResource("1_gfguv")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(66, 48)
 scale = Vector2(0.635338, 0.635338)
 sprite_frames = SubResource("SpriteFrames_b11yc")
 
-[node name="Button4" type="Button" parent="."]
+[node name="exit_button" type="Button" parent="."]
 layout_mode = 2
 offset_left = 1201.0
 offset_top = 17.0
@@ -40,7 +40,7 @@ theme_override_font_sizes/font_size = 29
 text = "exit"
 flat = true
 
-[node name="Button" type="Button" parent="."]
+[node name="solo_button" type="Button" parent="."]
 layout_mode = 2
 offset_left = 139.0
 offset_top = 15.0
@@ -51,7 +51,7 @@ theme_override_font_sizes/font_size = 29
 text = "solo"
 flat = true
 
-[node name="Button2" type="Button" parent="."]
+[node name="multi_button" type="Button" parent="."]
 layout_mode = 2
 offset_left = 247.0
 offset_top = 14.0
@@ -62,7 +62,7 @@ theme_override_font_sizes/font_size = 29
 text = "multiplayer"
 flat = true
 
-[node name="Button3" type="Button" parent="."]
+[node name="settings_button" type="Button" parent="."]
 layout_mode = 2
 offset_left = 455.0
 offset_top = 14.0
@@ -72,3 +72,5 @@ theme_override_fonts/font = ExtResource("3_w11c7")
 theme_override_font_sizes/font_size = 29
 text = "settings"
 flat = true
+
+[connection signal="pressed" from="solo_button" to="." method="SoloPress"]

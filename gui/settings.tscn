@@ -12,7 +12,7 @@ grow_vertical = 2
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 0
-offset_top = 74.0
+offset_top = 94.0
 offset_right = 1279.0
 offset_bottom = 718.0
 
